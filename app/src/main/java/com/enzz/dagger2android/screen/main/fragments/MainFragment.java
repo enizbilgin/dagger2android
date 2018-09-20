@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 
 import com.enzz.dagger2android.R;
 import com.enzz.dagger2android.screen.main.models.User;
+import com.enzz.dagger2android.screen.main.viewmodels.MainViewModel;
 
 import javax.inject.Inject;
 
@@ -28,7 +29,7 @@ public class MainFragment extends Fragment implements HasSupportFragmentInjector
     Retrofit retrofit;
 
     @Inject
-    User user;
+    MainViewModel viewModel;
 
     // you can do this this in a abstract class
     @Override

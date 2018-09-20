@@ -1,5 +1,7 @@
 package com.enzz.dagger2android.application;
 
+import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+
 import javax.inject.Singleton;
 
 import dagger.Module;
@@ -16,9 +18,10 @@ public class NetworkModule {
 
     @Singleton
     @Provides
-    public Retrofit provideConfiguration() {
+    public Retrofit provideRetrofit() {
         return new Retrofit.Builder()
                 .baseUrl("https://api.github.com/")
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
     }
 }

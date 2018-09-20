@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentTransaction;
 import com.enzz.dagger2android.R;
 import com.enzz.dagger2android.screen.main.fragments.MainFragment;
 import com.enzz.dagger2android.screen.main.models.User;
+import com.enzz.dagger2android.screen.main.viewmodels.MainViewModel;
 
 import javax.inject.Inject;
 
@@ -18,7 +19,7 @@ public class MainActivity extends DaggerAppCompatActivity {
     Retrofit retrofit;
 
     @Inject
-    User user;
+    MainViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
